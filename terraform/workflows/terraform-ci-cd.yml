@@ -2,9 +2,9 @@ name: Terraform CI/CD
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ master, develop ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 env:
   AWS_REGION: eu-west-1
