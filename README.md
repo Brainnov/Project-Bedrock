@@ -82,7 +82,7 @@ URL: Retail Store App URL: http://a3288974da9f14e3296c9d9324f1c712-1490008461.eu
 ## Troubleshooting
 
 - Ensured your AWS credentials are correct and have sufficient permissions.
-- Checked the Actions tab in GitHub for CI/CD workflow logs.
+- Checked the Actions tab in GitHub for CI/CD workflow logs and verified it.
 - Verified my kubeconfig and cluster status.
-
+ 
 
