@@ -52,7 +52,7 @@ output "ui_service_external_ip" {
 
 output "application_access_instructions" {
   description = "Instructions to access the application"
-  value = <<EOT
+  value       = <<EOT
 To access the Retail Store application:
 
 1. Get the UI service external URL:

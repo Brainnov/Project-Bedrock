@@ -1,7 +1,7 @@
 # AWS Auth ConfigMap to allow worker nodes to join the cluster
 resource "kubernetes_config_map" "aws_auth" {
   depends_on = [aws_eks_cluster.main]
-  
+
   metadata {
     name      = "aws-auth"
     namespace = "kube-system"
@@ -29,7 +29,7 @@ resource "null_resource" "apply_retail_store_app" {
   ]
 
   triggers = {
-    manifest_sha = filesha256("${path.module}/../kubernetes/retail-store-app.yaml")
+    manifest_sha     = filesha256("${path.module}/../kubernetes/retail-store-app.yaml")
     cluster_endpoint = aws_eks_cluster.main.endpoint
   }
 
@@ -60,7 +60,7 @@ resource "null_resource" "apply_retail_store_app" {
   }
 
   provisioner "local-exec" {
-    when = destroy
+    when    = destroy
     command = <<EOT
       # Clean up the application when destroying
       kubectl delete -f ../kubernetes/retail-store-app.yaml --ignore-not-found=true
