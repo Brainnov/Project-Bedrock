@@ -31,7 +31,7 @@ variable "public_subnet_cidrs" {
 variable "instance_types" {
   description = "EC2 instance types for worker nodes"
   type        = list(string)
-  default     = ["t3.small"]
+  default     = ["t3.medium"]
 }
 
 variable "desired_size" {
